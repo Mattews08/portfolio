@@ -105,7 +105,7 @@ export default function TopNav() {
                   as={Link}
                   showBorder={true}
                   borderColor={linkColor}
-                  src={'https://www.rw-designer.com/icon-image/6647-256x256x32.png'}
+                  src={'http://www.rw-designer.com/icon-image/6647-256x256x32.png'}
                 />
               </NextLink>
             </MotionBox>
