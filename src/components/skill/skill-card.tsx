@@ -19,7 +19,6 @@ const SkillCard = ({ name, image, link, description }: any) => {
     const linkColor = useLinkColor()
     const { data, loading } = usePalette(image)
 
-    // @ts-ignore
     return (
         <MotionBox variants={item}>
             <MotionBox whileHover={{ y: -5 }}>

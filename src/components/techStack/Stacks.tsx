@@ -13,9 +13,8 @@ import {
     useColorModeValue,
     SimpleGrid
 } from '@chakra-ui/react';
-import { GetStaticProps, NextPage } from 'next';
-import Section from '../skill/section';
-import { AiTwotoneThunderbolt, AiFillDatabase } from 'react-icons/ai';
+import { GetStaticProps } from 'next';
+import { AiTwotoneThunderbolt, AiOutlineCloudServer } from 'react-icons/ai';
 import { BiDesktop } from 'react-icons/bi';
 import { GiSpiderWeb } from 'react-icons/gi';
 import SkillCard from '../skill/skill-card';
@@ -25,18 +24,7 @@ import { MotionBox } from '../shared/animations/motion';
 import { container, PageSlideFade } from '../shared/animations/page-transitions';
 import PageLayout from '../layouts/pageLayout';
 import { useLinkColor } from '../theme';
-
-
-interface Skill {
-    name: string;
-    description: string;
-    link: string;
-    type: string;
-    image: string;
-}
- interface SkillProps {
-    skills: Skill[];
-}
+import { SkillProps} from '../../interface/interface';
 
 const tabList = [
     {
@@ -45,37 +33,46 @@ const tabList = [
         icon: AiTwotoneThunderbolt
     },
     {
-        name: 'Front-End',
-        filterName: 'Frontend',
+        name: 'Web Development',
+        filterName: 'development',
         icon: BiDesktop
     },
     {
-        name: 'Back-End',
-        filterName: 'Backend',
-        icon: AiFillDatabase
+        name: 'Web Design',
+        filterName: 'design',
+        icon: GiSpiderWeb
+    },
+    {
+        name: 'Devops',
+        filterName: 'devops',
+        icon: AiOutlineCloudServer
     }
 ];
-
-export const TechStack = ({ skills }: SkillProps) => {
+const TechStack: React.FC<SkillProps> = ({ skills }) => {
     const bgColor = useLinkColor();
     const [skillsList, setSkillsList] = useState([]);
 
     React.useEffect(() => {
-        setSkillsList(skills);
+        // @ts-ignore
+        return setSkillsList(skills);
     }, []);
 
-    const filterSkills = (tab) => {
-        if (tab.length) setSkillsList(skills.filter((skill) => skill.type === tab));
-        else setSkillsList(skills);
+    const filterSkills = (tab: string | any[]) => {
+        if (tab.length) { // @ts-ignore
+            setSkillsList(skills.filter((skill: { type: any; }) => skill.type === tab));
+        }
+        else { // @ts-ignore
+            setSkillsList(skills);
+        }
     };
 
-    // @ts-ignore
     return (
+        <PageLayout title="Skills">
             <PageSlideFade>
                 <VStack spacing={8}>
-                    <Section>
+
                         <VStack>
-                            <Header mt={0} mb={1} fontSize={22}>
+                            <Header mt={0} mb={1}>
                                 Tech Stack
                             </Header>
                             <Text
@@ -84,11 +81,11 @@ export const TechStack = ({ skills }: SkillProps) => {
                                 maxW="lg"
                                 textAlign="center"
                             >
-                                Uma lista das minhas ferramentas e tecnologias favoritas que uso regularmente.
+                                A list of my favorite tools and technologies that I use on a regular basis.
                             </Text>
                         </VStack>
-                    </Section>
-                    <Section zIndex={5}>
+
+
                         <Tabs variant="soft-rounded" colorScheme="blue" align="center" w="100%">
                             <TabList display="flex" flexWrap="wrap">
                                 {tabList.map((tab, index) => (
@@ -178,12 +175,13 @@ export const TechStack = ({ skills }: SkillProps) => {
                                 </TabPanel>
                             </TabPanels>
                         </Tabs>
-                    </Section>
                 </VStack>
             </PageSlideFade>
+        </PageLayout>
     );
 };
 
+// @ts-ignore
 export const getStaticProps: GetStaticProps<SkillProps> = () => {
     return {
         props: {
