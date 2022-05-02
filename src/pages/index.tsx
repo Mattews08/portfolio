@@ -1,27 +1,16 @@
 import NextLink from 'next/link'
 import {
-    Container,
+
     Box,
     Heading,
     Image,
-    useColorModeValue,
     Button,
-    List,
-    ListItem,
-    Link,
-    Icon
+
 }
     from "@chakra-ui/react"
-import Section from "../components/section"
 import Paragraph from "../components/paragraph"
 import {ChevronRightIcon} from "@chakra-ui/icons"
-import {
-    IoLogoTwitter,
-    IoLogoLinkedin,
-    IoLogoInstagram,
-    IoEarthSharp
-}
-    from 'react-icons/io5'
+
 import PageLayout from "../components/layouts/pageLayout";
 import TechStack from "../components/techStack/Stacks";
 import {skillsArray} from "../data/data";
@@ -60,7 +49,7 @@ export default function Home() {
                     />
                 </Box>
             </Box>
-            <Section delay={0.1}>
+
                 <Heading fontSize={22} variant="section-title" mb={5}>
                     Work
                 </Heading>
@@ -74,14 +63,9 @@ export default function Home() {
                         </Button>
                     </NextLink>
                 </Box>
-            </Section>
-
-            <Section delay={0.2}>
                 <TimeLine/>
-            </Section>
-            <Section delay={0.3}>
                 <TechStack skills={skillsArray}/>
-            </Section>
+
             {/*<Section delay={0.3}>*/}
             {/*    <Heading as="h3" variant="section-title">*/}
             {/*        On the web*/}
