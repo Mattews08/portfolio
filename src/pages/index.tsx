@@ -48,7 +48,7 @@ export default function Home() {
             </Box>
 
                 <Heading fontSize={22} variant="section-title" mb={5}>
-                    Work
+                    About
                 </Heading>
                 <Paragraph>Sou é um desenvolvedor Front-end, focado em ReactJS e Flutter. Tenho 25 anos, moro no
                     Brasil no estado do Amazonas. Atualmente trabalho no Dell LEAD - Centro de Pesquisa, Desenvolvimento
