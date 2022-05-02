@@ -1,6 +1,5 @@
 import { Box, BoxProps } from '@chakra-ui/react'
 import { PropsWithChildren } from 'react'
-import UnderlinedText from './underlined-text'
 
 interface Props extends BoxProps {
   underlineColor?: string
@@ -24,7 +23,6 @@ const Header = ({
     {...props}
     textAlign="left"
   >
-    <UnderlinedText color={underlineColor}>{children}</UnderlinedText>
     {emoji ? ' ' + emoji : ''}
   </Box>
 )

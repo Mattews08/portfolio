@@ -69,6 +69,7 @@ export const TechStack = ({ skills }: SkillProps) => {
         else setSkillsList(skills);
     };
 
+    // @ts-ignore
     return (
             <PageSlideFade>
                 <VStack spacing={8}>

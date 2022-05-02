@@ -1,13 +1,11 @@
 import { Text, useColorModeValue, Spinner } from '@chakra-ui/react'
-import { useLinkColor } from 'components/theme'
 
 interface DisplayTextProps {
   isLoading: boolean
   value: number
 }
 
-const DisplayText: React.SFC<DisplayTextProps> = ({ isLoading, value }) => {
-  const linkColor = useLinkColor()
+const DisplayText = ({ isLoading, value }: DisplayTextProps) => {
   const textColor = useColorModeValue('gray.500', 'gray.200')
 
   return (
@@ -17,7 +15,6 @@ const DisplayText: React.SFC<DisplayTextProps> = ({ isLoading, value }) => {
           size="xs"
           speed="0.65s"
           emptyColor="gray.200"
-          color={linkColor}
         />
       ) : (
         <Text
