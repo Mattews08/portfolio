@@ -9,8 +9,6 @@ import {
     useColorMode,
     useColorModeValue,
 } from '@chakra-ui/react'
-import {FaGraduationCap} from 'react-icons/fa'
-import {BsFillBriefcaseFill} from 'react-icons/bs'
 import {
     PageSlideFade,
     StaggerChildren,
@@ -18,8 +16,6 @@ import {
 } from '../shared/animations/page-transitions'
 import {MotionBox} from '../shared/animations/motion'
 import {companies, institutes} from '../../data/data'
-import Header from '../shared/header'
-import PageLayout from '../layouts/pageLayout'
 import {Tags} from '../shared/Tags'
 
 interface CardProps {
@@ -31,8 +27,6 @@ interface CardProps {
     colorMode: string
     alt?: string
 }
-
-const TURQUOISE = '#06b6d4'
 
 const Card = (props: CardProps) => {
     const {title, role, skills, period, logo, colorMode, alt} = props

@@ -3,28 +3,15 @@ import {
   Flex,
   Avatar,
   HStack,
-  Button,
-  Text,
   Link,
   IconButton,
   useDisclosure,
   useColorModeValue,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Stack,
-  Icon
+  Stack
 } from '@chakra-ui/react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { ColorModeSwitcher } from '../theme/ColorModeSwitcher';
-import { AiTwotoneThunderbolt } from 'react-icons/ai';
-import { BiChevronDown } from 'react-icons/bi';
-import { CgArrowsExchange } from 'react-icons/cg';
-import { BsCheckCircle } from 'react-icons/bs';
-import { MdTimeline } from 'react-icons/md';
-import { BsBook } from 'react-icons/bs';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { AccentPicker } from '../theme/Accent';
@@ -79,51 +66,9 @@ const NavLink = (props: NavLinkProps) => {
   );
 };
 
-interface MenuLinkProps {
-  name: string;
-  path: string;
-  color: string;
-  bg: string;
-  rPath: string;
-  onClose: () => void;
-}
-
-const MenuLink = (props: MenuLinkProps) => {
-  const iconsObj = {
-    '/tech-stack': <Icon as={AiTwotoneThunderbolt} size={18} color={props.color} />,
-    '/open-source': <Icon as={BsBook} size={18} color={props.color} />,
-    '/achievements': <Icon as={BsCheckCircle} size={18} color={props.color} />,
-    '/projects': <Icon as={MdTimeline} size={18} color={props.color} />,
-    '/changelog': <Icon as={CgArrowsExchange} size={18} color={props.color} />
-  };
-
-  return (
-    <NextLink href={props.path} passHref>
-      <Link onClick={() => props.onClose()}>
-        <MenuItem
-          color={props.rPath === props.path && props.color}
-          bg={props.rPath === props.path && props.bg}
-          _hover={{ color: props.color, bg: props.bg }}
-        >
-          <HStack>
-            {iconsObj[props.path]}
-            <Text>{props.name}</Text>
-          </HStack>
-        </MenuItem>
-      </Link>
-    </NextLink>
-  );
-};
-
 export default function TopNav() {
   const linkColor = useLinkColor();
-  const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const menuProps = {
-    bg: useColorModeValue('gray.200', 'gray.700'),
-    color: useColorModeValue('blue.500', 'blue.200')
-  };
 
   return (
     <>
@@ -161,7 +106,7 @@ export default function TopNav() {
                   size={'sm'}
                   showBorder={true}
                   borderColor={linkColor}
-                  src={'http://www.rw-designer.com/icon-image/6647-256x256x32.png'}
+                  src={'https://www.rw-designer.com/icon-image/6647-256x256x32.png'}
                 />
               </NextLink>
             </MotionBox>
