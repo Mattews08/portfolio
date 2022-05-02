@@ -72,7 +72,7 @@ export const TechStack = () => {
                                 maxW="lg"
                                 textAlign="center"
                             >
-                                A list of my favorite tools and technologies that I use on a regular basis.
+                                Uma lista das minhas ferramentas e tecnologias favoritas que uso regularmente.
                             </Text>
                         </VStack>
 

@@ -59,7 +59,7 @@ const Footer = () => {
           }}
         />
         in Pakistan{"  "}🇵🇰
-      </Box> */}
+      </Box>
         {/* </HStack> */}
         <Box textAlign="center">
           {siteConfig.author.accounts.map((sc, index) => (
