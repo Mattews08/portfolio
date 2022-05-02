@@ -34,18 +34,13 @@ const tabList = [
     },
     {
         name: 'Web Development',
-        filterName: 'development',
+        filterName: 'FrontEnd',
         icon: BiDesktop
     },
     {
         name: 'Web Design',
         filterName: 'design',
         icon: GiSpiderWeb
-    },
-    {
-        name: 'Devops',
-        filterName: 'devops',
-        icon: AiOutlineCloudServer
     }
 ];
 const TechStack: React.FC<SkillProps> = ({ skills }) => {
@@ -67,7 +62,6 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
     };
 
     return (
-        <PageLayout title="Skills">
             <PageSlideFade>
                 <VStack spacing={8}>
 
@@ -112,7 +106,7 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
                                 <TabPanel px={0}>
                                     <MotionBox variants={container} initial="hidden" animate="visible">
                                         <SimpleGrid columns={[1, 1, 2]} spacing={4} mt={8}>
-                                            {skillsList.map((tool, index) => (
+                                            {skillsArray.map((tool, index) => (
                                                 <SkillCard
                                                     key={index}
                                                     name={tool.name}
@@ -128,7 +122,7 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
                                 <TabPanel px={0}>
                                     <MotionBox variants={container} initial="hidden" animate="visible">
                                         <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
-                                            {skillsList.map((tool, index) => (
+                                            {skillsArray.map((tool, index) => (
                                                 <SkillCard
                                                     key={index}
                                                     name={tool.name}
@@ -144,7 +138,7 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
                                 <TabPanel px={0}>
                                     <MotionBox variants={container} initial="hidden" animate="visible">
                                         <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
-                                            {skillsList.map((tool, index) => (
+                                            {skillsArray.map((tool, index) => (
                                                 <SkillCard
                                                     key={index}
                                                     name={tool.name}
@@ -160,7 +154,7 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
                                 <TabPanel px={0}>
                                     <MotionBox variants={container} initial="hidden" animate="visible">
                                         <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
-                                            {skillsList.map((tool, index) => (
+                                            {skillsArray.map((tool, index) => (
                                                 <SkillCard
                                                     key={index}
                                                     name={tool.name}
@@ -177,7 +171,6 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
                         </Tabs>
                 </VStack>
             </PageSlideFade>
-        </PageLayout>
     );
 };
 
