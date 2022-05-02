@@ -1,19 +1,16 @@
 import NextLink from 'next/link'
 import {
-
     Box,
     Heading,
     Image,
-    Button,
-
+    Button
 }
     from "@chakra-ui/react"
 import Paragraph from "../components/paragraph"
 import {ChevronRightIcon} from "@chakra-ui/icons"
 
 import PageLayout from "../components/layouts/pageLayout";
-import TechStack from "../components/techStack/Stacks";
-import {skillsArray} from "../data/data";
+import {TechStack} from "../components/techStack/Stacks";
 import {TimeLine} from "../components/about";
 
 export default function Home() {
@@ -64,7 +61,7 @@ export default function Home() {
                     </NextLink>
                 </Box>
                 <TimeLine/>
-                <TechStack skills={skillsArray}/>
+                <TechStack />
 
             {/*<Section delay={0.3}>*/}
             {/*    <Heading as="h3" variant="section-title">*/}

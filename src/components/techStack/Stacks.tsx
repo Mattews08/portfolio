@@ -13,8 +13,7 @@ import {
     useColorModeValue,
     SimpleGrid
 } from '@chakra-ui/react';
-import { GetStaticProps } from 'next';
-import { AiTwotoneThunderbolt, AiOutlineCloudServer } from 'react-icons/ai';
+import { AiTwotoneThunderbolt } from 'react-icons/ai';
 import { BiDesktop } from 'react-icons/bi';
 import { GiSpiderWeb } from 'react-icons/gi';
 import SkillCard from '../skill/skill-card';
@@ -22,9 +21,7 @@ import { skillsArray } from '../../data/data';
 import Header from '../shared/header';
 import { MotionBox } from '../shared/animations/motion';
 import { container, PageSlideFade } from '../shared/animations/page-transitions';
-import PageLayout from '../layouts/pageLayout';
 import { useLinkColor } from '../theme';
-import { SkillProps} from '../../interface/interface';
 
 const tabList = [
     {
@@ -43,23 +40,23 @@ const tabList = [
         icon: GiSpiderWeb
     }
 ];
-const TechStack: React.FC<SkillProps> = ({ skills }) => {
+export const TechStack = () => {
     const bgColor = useLinkColor();
     const [skillsList, setSkillsList] = useState([]);
-
-    React.useEffect(() => {
-        // @ts-ignore
-        return setSkillsList(skills);
-    }, []);
-
-    const filterSkills = (tab: string | any[]) => {
-        if (tab.length) { // @ts-ignore
-            setSkillsList(skills.filter((skill: { type: any; }) => skill.type === tab));
-        }
-        else { // @ts-ignore
-            setSkillsList(skills);
-        }
-    };
+    //
+    // React.useEffect(() => {
+    //     // @ts-ignore
+    //     return setSkillsList(skills);
+    // }, []);
+    //
+    // const filterSkills = (tab: string | any[]) => {
+    //     if (tab.length) { // @ts-ignore
+    //         setSkillsList(skills.filter((skill: { type: any; }) => skill.type === tab));
+    //     }
+    //     else { // @ts-ignore
+    //         setSkillsList(skills);
+    //     }
+    // };
 
     return (
             <PageSlideFade>
@@ -92,7 +89,7 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
                                         }}
                                         mr={2}
                                         mt={2}
-                                        onClick={() => filterSkills(tab.filterName)}
+                                        // onClick={() => filterSkills(tab.filterName)}
                                         key={index}
                                     >
                                         <HStack spacing={1}>
@@ -173,14 +170,3 @@ const TechStack: React.FC<SkillProps> = ({ skills }) => {
             </PageSlideFade>
     );
 };
-
-// @ts-ignore
-export const getStaticProps: GetStaticProps<SkillProps> = () => {
-    return {
-        props: {
-            skills: skillsArray
-        }
-    };
-};
-
-export default TechStack;
