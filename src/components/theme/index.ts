@@ -42,7 +42,6 @@ export const extendedTheme = extendTheme({
         transitionTimingFunction: 'ease-out',
         fontWeight: '500',
         _hover: {
-          // eslint-disable-next-line react-hooks/rules-of-hooks
           color: useHoverLinkColor(),
         },
         // _hover: {
@@ -189,7 +188,6 @@ export const extendedTheme = extendTheme({
       },
     },
     code: {
-      rounded: 'sm',
       px: '1',
       fontSize: '0.875em',
       py: '2px',

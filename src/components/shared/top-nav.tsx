@@ -103,7 +103,6 @@ export default function TopNav() {
               <NextLink href={'/'} passHref>
                 <Avatar
                   as={Link}
-                  size={'sm'}
                   showBorder={true}
                   borderColor={linkColor}
                   src={'https://www.rw-designer.com/icon-image/6647-256x256x32.png'}

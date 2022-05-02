@@ -35,7 +35,6 @@ export const Tag: React.FC<TagProps> = ({
   ...props
 }) => {
   const propsOverride = {
-    size: 'sm',
     verticalAlign: 'middle',
     ...useTagStyles(colorScheme),
   }

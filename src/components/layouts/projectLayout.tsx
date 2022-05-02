@@ -37,7 +37,6 @@ const ProjectLayoutMed = ({ project }: any) => {
     >
       <a href={project.site} target="_blank" rel="noopener noreferrer">
         <AspectRatio ratio={1.85} w="100%" h="100%" rounded="xl">
-          {/* eslint-disable-next-line jsx-a11y/alt-text */}
           <Image
             src={project.imageLight}
             fallback={<Skeleton />}
@@ -86,7 +85,7 @@ const ProjectLayoutMed = ({ project }: any) => {
                 rounded="lg"
                 align="left"
                 p="4"
-                fontSize="sm"
+                fontSize="16px"
               >
                 {project.description}
               </MotionText>
@@ -166,7 +165,6 @@ const LeftProjectLayoutLarge = ({ project }: any) => {
       >
         <a href={project.site} target="_blank" rel="noopener noreferrer">
           <AspectRatio ratio={1.85} w="100%" h="100%" rounded="xl">
-            {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image
               src={project.imageLight}
               fallback={<Skeleton />}
@@ -222,7 +220,7 @@ const LeftProjectLayoutLarge = ({ project }: any) => {
               <MotionList
                 variants={fadeInUp}
                 display="flex"
-                fontSize="sm"
+                fontSize="16px"
                 justifyContent="end"
                 mt="3"
                 color={useColorModeValue('gray.900', 'gray.100')}
@@ -303,7 +301,7 @@ const RightProjectLayoutLarge = ({ project }: any) => {
               <MotionList
                 variants={fadeInUp}
                 display="flex"
-                fontSize="sm"
+                fontSize="16px"
                 justifyContent="start"
                 mt="3"
                 color={useColorModeValue('gray.900', 'gray.100')}

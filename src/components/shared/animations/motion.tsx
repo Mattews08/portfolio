@@ -44,7 +44,6 @@ export const MotionImage = motion(
       Object.entries(props).filter(([key]) => !isValidMotionProp(key))
     )
     return (
-        // eslint-disable-next-line jsx-a11y/alt-text
       <Image
         ref={ref}
         fallbackSrc={'/assets/images/placeholder.png'}

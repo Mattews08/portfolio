@@ -62,7 +62,7 @@ const Card = (props: CardProps) => {
                             </Heading>
                             <Heading
                                 textAlign="left"
-                                fontSize="sm"
+                                fontSize="16px"
                                 fontWeight="normal"
                                 color={`mode.${colorMode}.career.subtext`}
                             >
@@ -80,8 +80,6 @@ const Card = (props: CardProps) => {
                                     interactive={false}
                                     tagProps={{
                                         colorScheme: 'gray',
-                                        padding: '0 3px',
-                                        size: 'sm',
                                     }}
                                 />
                             </Stack>
@@ -105,8 +103,7 @@ const Card = (props: CardProps) => {
                         interactive={false}
                         tagProps={{
                             colorScheme: 'gray',
-                            padding: '0 3px',
-                            size: 'sm',
+                            padding: '0 3px'
                         }}
                     />
                 </Stack>

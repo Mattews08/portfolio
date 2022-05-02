@@ -38,7 +38,7 @@ const Footer = () => {
         {/* <HStack> */}
         <Text
           textAlign="center"
-          fontSize="sm"
+          fontSize="16px"
           color={useColorModeValue("gray.500", "gray.200")}
         >
           © {new Date().getFullYear()} Matheus Lima{" "}
@@ -69,7 +69,6 @@ const Footer = () => {
               isExternal
               href={sc.url}
               aria-label={sc.label}
-              sm
               colorScheme={sc.type}
               icon={sc.icon}
               {...iconProps}

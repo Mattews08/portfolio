@@ -81,7 +81,7 @@ const SkillCard = ({ name, image, link, description }: any) => {
                                         {name}
                                     </Text>
                                     <Text
-                                        fontSize="sm"
+                                        fontSize="16px"
                                         color={useColorModeValue('gray.500', 'gray.200')}
                                     >
                                         {description}

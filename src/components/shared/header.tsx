@@ -6,7 +6,6 @@ interface Props extends BoxProps {
   emoji?: string
 }
 
-// @ts-ignore
 const Header = ({
   children,
   underlineColor,

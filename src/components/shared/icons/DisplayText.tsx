@@ -18,7 +18,7 @@ const DisplayText = ({ isLoading, value }: DisplayTextProps) => {
         />
       ) : (
         <Text
-          fontSize="sm"
+          fontSize="16px"
           noOfLines={1}
           fontWeight="400"
           align="left"
