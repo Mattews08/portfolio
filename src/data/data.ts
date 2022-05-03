@@ -99,6 +99,13 @@ export const skillsArray = [
         type: 'Frontend',
         image: '/assets/images/skills/react.png'
     },
+    {
+        name: 'Java',
+        description: 'Back-End',
+        link: 'https://dev.java/',
+        type: 'Backend',
+        image: '/assets/images/skills/java.png'
+    },
     // {
     //     name: 'NextJs',
     //     description: 'Front-End',
@@ -161,22 +168,5 @@ export const skillsArray = [
         link: 'https://www.mysql.com/',
         type: 'Backend',
         image: '/assets/images/skills/mysql.png'
-    }
-];
-
-export const newContent = [
-    {
-        link: '/blog/find-out-8-new-chakraui-components-that-i-built',
-        text: 'Find out 8 new chakraUI components that I built',
-        showNewTag: true
-    },
-    {
-        link: '/blog/templateskart-free-chakra-ui-components-and-projects',
-        text: 'TemplatesKart | Free Chakra UI Components and Projects',
-        showNewTag: true
-    },
-    {
-        link: '/blog/started-2022-by-updating-portfolio-website-1jde-temp-slug-4553258',
-        text: 'Started 2022 by updating portfolio website'
     }
 ];

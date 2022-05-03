@@ -40,22 +40,27 @@ const BoxHeader = styled.p`
 export default function Home() {
     return (
         <PageLayout title="Matheus Lima - Full Stack Developer">
-            <Box display="flex" justifyContent="center" borderRadius="lg" bg={useColorModeValue('whiteAlpha.200', 'whiteAlpha.500')} p={3} mb={20}
-                 >
+            <Box display="flex" justifyContent="center" borderRadius="lg" bg='teal' p={3} mb={20}
+            >
                 <BoxHeader>
-                    Hello 👋, I&rsquo;m a full-stack developer from Brazil!
+                    Hello 👋, I&rsquo;m a Full Stack developer from Brazil!
+
                 </BoxHeader>
             </Box>
             <Box display={{md: 'flex'}}>
                 <Box flexGrow={1}>
-                    <Heading fontSize={22} variant="page-title" mb={5}>
-                        Matheus Lima
+                    <Heading fontSize={22} variant="section-title" mb={5}>
+                        About 🧑‍💻
                     </Heading>
-                    <p>Developer (ReactJS, Java, NodeJS)</p>
+                    <Paragraph>
+                        My name is Matheus and I'm a Full Stack developer and game lover from Brazil!
+                        <br/>
+                        My main stacks are ReactJS and NodeJS. I am 25 years old, I live in Manaus, capital of Amazonas.
+                        Currently works at Dell LEAD - Research, Development and Innovation Center.</Paragraph>
                 </Box>
                 <Box
                     flexShrink={0}
-                    mt={{base: 4, md: 0}}
+                    mt={{base: 6, md: 4}}
                     ml={{md: 6}}
                     alignItems="center"
                 >
@@ -71,13 +76,6 @@ export default function Home() {
                     />
                 </Box>
             </Box>
-
-            <Heading fontSize={22} variant="section-title" mb={5}>
-                About
-            </Heading>
-            <Paragraph>Sou é um desenvolvedor Front-end, focado em ReactJS e Flutter. Tenho 25 anos, moro no
-                Brasil no estado do Amazonas. Atualmente trabalho no Dell LEAD - Centro de Pesquisa, Desenvolvimento
-                e Inovação Dell.</Paragraph>
             <Box textAlign="center" my={4}>
                 <NextLink href="/works">
                     <Button rightIcon={<ChevronRightIcon/>} colorScheme="teal">

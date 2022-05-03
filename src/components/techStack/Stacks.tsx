@@ -13,9 +13,8 @@ import {
     useColorModeValue,
     SimpleGrid
 } from '@chakra-ui/react';
-import { AiTwotoneThunderbolt } from 'react-icons/ai';
+import { AiTwotoneThunderbolt, AiFillDatabase } from 'react-icons/ai';
 import { BiDesktop } from 'react-icons/bi';
-import { GiSpiderWeb } from 'react-icons/gi';
 import SkillCard from '../skill/skill-card';
 import { skillsArray } from '../../data/data';
 import Header from '../shared/header';
@@ -30,14 +29,14 @@ const tabList = [
         icon: AiTwotoneThunderbolt
     },
     {
-        name: 'Web Development',
+        name: 'Front-End',
         filterName: 'FrontEnd',
         icon: BiDesktop
     },
     {
-        name: 'Web Design',
-        filterName: 'design',
-        icon: GiSpiderWeb
+        name: 'Back-End',
+        filterName: 'Backend',
+        icon: AiFillDatabase
     }
 ];
 export const TechStack = () => {
