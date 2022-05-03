@@ -6,17 +6,17 @@ import {
     Button, useColorModeValue
 }
     from "@chakra-ui/react"
-import Paragraph from "../components/paragraph"
 import {ChevronRightIcon} from "@chakra-ui/icons"
 
 import PageLayout from "../components/layouts/pageLayout";
 import {TechStack} from "../components/techStack/Stacks";
 import {TimeLine} from "../components/about";
 import styled from "@emotion/styled";
+import Paragraph from "../components/paragraph";
 
 const BoxHeader = styled.p`
   box-shadow: .6em 0 0 #81E6D9;
-  width: 36ch;
+  width: 25ch;
   overflow: hidden;
   color: #FFF;
   white-space: nowrap;
@@ -43,7 +43,7 @@ export default function Home() {
             <Box display="flex" justifyContent="center" borderRadius="lg" bg='teal' p={3} mb={20}
             >
                 <BoxHeader>
-                    Hello 👋, I&rsquo;m a Full Stack developer from Brazil!
+                    Hello, I&rsquo;m a Full Stack developer!
 
                 </BoxHeader>
             </Box>
@@ -60,9 +60,9 @@ export default function Home() {
                 </Box>
                 <Box
                     flexShrink={0}
-                    mt={{base: 6, md: 4}}
+                    mt={{base: 4, md: 6}}
                     ml={{md: 6}}
-                    alignItems="center"
+                    textAlign="center"
                 >
                     <Image
                         borderColor="whiteAlpha.800"
