@@ -35,7 +35,6 @@ const Footer = () => {
         alignItems="center"
         w="100%"
       >
-        {/* <HStack> */}
         <Text
           textAlign="center"
           fontSize="16px"
@@ -43,24 +42,6 @@ const Footer = () => {
         >
           © {new Date().getFullYear()} Matheus Lima{" "}
         </Text>
-        {/* <Box fontSize="md" textAlign="left">
-        Website built with
-        <Box
-          as="span"
-          mx="2"
-          _before={{
-            cursor: "default",
-            content: '"❤️"'
-          }}
-          _hover={{
-            _before: {
-              content: '"☕️"'
-            }
-          }}
-        />
-        in Pakistan{"  "}🇵🇰
-      </Box>
-        {/* </HStack> */}
         <Box textAlign="center">
           {siteConfig.author.accounts.map((sc, index) => (
             <IconButton

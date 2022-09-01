@@ -3,16 +3,18 @@ import {
     Box,
     Heading,
     Image,
-    Button, useColorModeValue
+    Button, useColorModeValue, List, ListItem, Icon, Link
 }
     from "@chakra-ui/react"
 import {ChevronRightIcon} from "@chakra-ui/icons"
 
 import PageLayout from "../components/layouts/pageLayout";
-import {TechStack} from "../components/techStack/Stacks";
+import TechStack from "../components/techStack/Stacks";
 import {TimeLine} from "../components/about";
 import styled from "@emotion/styled";
 import Paragraph from "../components/paragraph";
+import Section from '../components/skill/section';
+import { skillsArray } from '../data/data';
 
 const BoxHeader = styled.p`
   box-shadow: .6em 0 0 #81E6D9;
@@ -84,61 +86,61 @@ export default function Home() {
                 </NextLink>
             </Box>
             <TimeLine/>
-            <TechStack/>
+            <TechStack skills={skillsArray} />
 
-            {/*<Section delay={0.3}>*/}
-            {/*    <Heading as="h3" variant="section-title">*/}
-            {/*        On the web*/}
-            {/*    </Heading>*/}
-            {/*    <List>*/}
-            {/*        <ListItem>*/}
-            {/*            <Link href="https://www.instagram.com/mattheuuslima/" target="_blank">*/}
-            {/*                <Button*/}
-            {/*                    variant="ghost"*/}
-            {/*                    colorScheme="teal"*/}
-            {/*                    leftIcon={<Icon as={IoLogoInstagram}/>}*/}
-            {/*                >*/}
-            {/*                    @mattheuuslima*/}
-            {/*                </Button>*/}
-            {/*            </Link>*/}
+            {/* <Section delay={0.3}>
+                <Heading as="h3" variant="section-title">
+                    On the web
+                </Heading>
+                <List>
+                    <ListItem>
+                        <Link href="https://www.instagram.com/mattheuuslima/" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<Icon as={IoLogoInstagram}/>}
+                            >
+                                @mattheuuslima
+                            </Button>
+                        </Link>
 
-            {/*        </ListItem>*/}
-            {/*        <ListItem>*/}
-            {/*            <Link href="https://www.linkedin.com/in/matheusl08/" target="_blank">*/}
-            {/*                <Button*/}
-            {/*                    variant="ghost"*/}
-            {/*                    colorScheme="teal"*/}
-            {/*                    leftIcon={<Icon as={IoLogoLinkedin}/>}*/}
-            {/*                >*/}
-            {/*                    @matheusl08*/}
-            {/*                </Button>*/}
-            {/*            </Link>*/}
+                    </ListItem>
+                    <ListItem>
+                        <Link href="https://www.linkedin.com/in/matheusl08/" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<Icon as={IoLogoLinkedin}/>}
+                            >
+                                @matheusl08
+                            </Button>
+                        </Link>
 
-            {/*        </ListItem>*/}
-            {/*        <ListItem>*/}
-            {/*            <Link href="https://twitter.com/mathLima8" target="_blank">*/}
-            {/*                <Button*/}
-            {/*                    variant="ghost"*/}
-            {/*                    colorScheme="teal"*/}
-            {/*                    leftIcon={<Icon as={IoLogoTwitter}/>}*/}
-            {/*                >*/}
-            {/*                    @mathLima8*/}
-            {/*                </Button>*/}
-            {/*            </Link>*/}
-            {/*        </ListItem>*/}
-            {/*        <ListItem>*/}
-            {/*            <Link href="https://bymotion.com.br/" target="_blank">*/}
-            {/*                <Button*/}
-            {/*                    variant="ghost"*/}
-            {/*                    colorScheme="teal"*/}
-            {/*                    leftIcon={<Icon as={IoEarthSharp}/>}*/}
-            {/*                >*/}
-            {/*                    bymotion.com.br*/}
-            {/*                </Button>*/}
-            {/*            </Link>*/}
-            {/*        </ListItem>*/}
-            {/*    </List>*/}
-            {/*</Section>*/}
+                    </ListItem>
+                    <ListItem>
+                        <Link href="https://twitter.com/mathLima8" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<Icon as={IoLogoTwitter}/>}
+                            >
+                                @mathLima8
+                            </Button>
+                        </Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link href="https://bymotion.com.br/" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="teal"
+                                leftIcon={<Icon as={IoEarthSharp}/>}
+                            >
+                                bymotion.com.br
+                            </Button>
+                        </Link>
+                    </ListItem>
+                </List>
+            </Section> */}
         </PageLayout>
     )
 }

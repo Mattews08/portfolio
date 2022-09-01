@@ -7,5 +7,5 @@ export interface Skill {
 }
 
 export interface SkillProps {
-    skills: Skill;
+    skills: Skill[];
 }

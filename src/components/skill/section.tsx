@@ -3,12 +3,12 @@ import { Center } from "@chakra-ui/react";
 import Container from "./container";
 
 type IProps = {
-    full: any
+    full: boolean
     children: ReactNode
     rest?: any
 }
 
-const Section = (props: IProps) => {
+const Section = (props : IProps) => {
     const { full, children, ...rest } = props;
     return (
         <Center as="section" {...rest} w="100%">
