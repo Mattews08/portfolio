@@ -39,6 +39,11 @@ const tabList = [
     name: 'Back-End',
     filterName: 'Backend',
     icon: AiFillDatabase
+  },
+  {
+    name: 'Mobile',
+    filterName: 'Mobile',
+    icon: AiFillDatabase
   }
 ];
 
